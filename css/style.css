@@ -1,0 +1,168 @@
+.wrapper{
+    overflow: hidden;
+    min-height: 100%;
+    position: relative;
+
+}
+.body{
+    background-color: blueviolet;
+    
+
+}
+.page{
+    padding: 100px;
+}
+.page__block{
+    margin-bottom: 50px;
+}
+.block{
+    background-color: aliceblue;
+    height: 300px;
+
+}
+.block__item{
+    width: 150px;
+    height: 150px;
+    background-color:aqua;
+    transition: all 0.9s ease 0s;
+     
+}
+.block__item:hover{
+    background-color: black;
+    width: 1000px;
+}
+.link{
+    color: black;
+    transition: all 0.5s ease 0s;
+}
+.link:hover{
+    color: blue;
+}
+.duration__block{
+    margin-bottom: 50px;
+}
+.duration__item{
+    width: 150px;
+    height: 150px;
+    background-color:aqua;
+    transition-duration: 5s,10s;
+    transition-property: width,height;
+    transition-delay: 2s;
+}
+.duration__item:hover{
+    width: 1000px;
+    background-color:blueviolet;
+    height: 200px;
+}
+.timing_function__block{
+    margin-bottom: 100px;
+
+}
+.timing_function__item{
+    width: 150px;
+    height: 150px;
+    background-color:aqua;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition: width 3s ease 0s, height 0,5s ease-in 0,5s;
+}
+
+
+.timing_function__item:hover{
+    width: 1000px;
+    background-color:blueviolet;
+    height: 200px;
+    transform: translate(10%, 10%);
+}
+.link_link{
+    color:black;
+    position: relative;
+}
+.link_link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width:0%;
+    left:0;
+    height: 1px;
+    background-color:red;
+    transition:all 3s ease 5s;
+}
+.link_link:hover::after{
+    width:100%;
+
+}
+
+.link_link:hover{
+    color:blueviolet
+
+}
+.home_work__block{
+   
+    margin-bottom: 150px;
+    background-color: black;
+}
+.home_work__item{
+    width: 200Px;
+    height: 200px;
+    background-color: blue;
+    opacity: 0;
+}
+.home_work__item:hover{
+    width: 1000px;
+    background-color:blueviolet;
+    height: 200px;
+    opacity: 1;
+    transition-delay: 1s;
+    transition:all 3s ease 0s;
+
+
+}
+.home_work__second{
+    width: 600px;
+    height: 400px;
+    color:azure;
+    background-color:blue;
+    animation-name:rotate-block;
+    animation-duration: 5s;
+}
+@keyframes rotate-block {
+    0%{
+        transform: 0deg;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.car{
+    margin-top: 300px;
+    margin-bottom: 150px;
+    width:500px;
+    height: 100px;
+    background-color: darkmagenta;
+    border-radius: 300px 900px 0 0;
+    position: relative;
+}
+.car__wheels{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    left:0;
+
+}
+.car__wheel{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(opx,-50%);
+    border:10px dashed red;
+
+}
+.car__wheel:first-child{
+    left:0;
+}
+.car__wheel:last-child{
+    right: 0;
+}
